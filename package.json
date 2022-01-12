@@ -4,7 +4,6 @@
   "description": "Slack Bot for Managing Development Environment Usage Status",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
   "repository": {
@@ -15,8 +14,5 @@
   "license": "MIT",
   "dependencies": {
     "@slack/bolt": "^3.8.1"
-  },
-  "engines": {
-    "node": "16.x"
   }
 }
