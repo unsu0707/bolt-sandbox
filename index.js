@@ -5,6 +5,12 @@ const app = new App({
   signingSecret: process.env.SLACK_SIGNING_SECRET,
 });
 
+// "goodbye" が含まれるメッセージの着信をリッスン
+app.message("hello", async ({ message, say }) => {
+  // say() で、イベントがトリガーされたチャンネルにメッセージを送信する
+  await say(`Hello, <@${message.user}> :wave:`);
+});
+
 (async () => {
   await app.start(process.env.PORT || 3000);
 
